@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 import { faker } from '@faker-js/faker';
-describe('Testar as funcionalidade login do EBAC-SHOP', () => {
+
+describe('Testar Funcionalidade login do EBAC-SHOP', () => {
     beforeEach(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/')
     });
@@ -38,6 +39,7 @@ describe('Testar as funcionalidade login do EBAC-SHOP', () => {
     it.only('cadastrando novos usuários - USANDO DADOS FAKER', () => {
         const random_email = faker.internet.email()
         const random_password = faker.internet.password()
+
         cy.get('.icon-user-unfollow').click()
         cy.get('[name="email"]').type(random_email)
         cy.get('.register > :nth-child(2) > [name="password"]').type(random_password)
