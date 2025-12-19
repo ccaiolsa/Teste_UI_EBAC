@@ -1,0 +1,24 @@
+{
+  "name": "teste_ui_ebac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccaiolsa/Teste_UI_EBAC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ccaiolsa/Teste_UI_EBAC/issues"
+  },
+  "homepage": "https://github.com/ccaiolsa/Teste_UI_EBAC#readme",
+  "dependencies": {
+    "cypress": "^15.8.1"
+  }
+}
