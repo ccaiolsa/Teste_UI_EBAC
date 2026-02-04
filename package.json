@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pretest": "rm -rf mochawesome-report",
     "cy:run": "npx cypress run",
     "cy:merge": "npx mochawesome-merge ./mochawesome-report/.jsons/*.json -o output.json"
   },
