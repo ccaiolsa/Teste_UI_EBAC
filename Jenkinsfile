@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                bat '''NO_COLOR=1 npm install'''
+                withEnv(['NO_COLOR=1']){
+                    bat '''npm install'''
+                    }
             }
         }
         stage('Test') {
