@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "pretest": "rm -rf mochawesome-report",
+    "cy:run": "npx cypress run",
+    "cy:merge": "npx mochawesome-merge ./mochawesome-report/.jsons/*.json -o output.json"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,8 @@
     "cypress": "^15.10.0"
   },
   "devDependencies": {
-    "cypress-mochawesome-reporter": "^4.0.2"
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.0"
   }
 }
