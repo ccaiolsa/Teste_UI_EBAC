@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-04T15:30:12.151Z",
+    "end": "2026-02-04T15:30:34.152Z",
+    "duration": 22001,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4ffab352-8df7-4c43-8963-f7b8060dbbfd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\login_ebac-shop.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\login_ebac-shop.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "efc40e3e-71cf-48b4-80f7-0201363cb784",
+          "title": "Testar Funcionalidade login do EBAC-SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "cadastrando novos usuários - USANDO DADOS FAKER",
+              "fullTitle": "Testar Funcionalidade login do EBAC-SHOP cadastrando novos usuários - USANDO DADOS FAKER",
+              "timedOut": null,
+              "duration": 11897,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const random_email = _faker.faker.internet.email();\nconst random_password = _faker.faker.internet.password();\ncy.get('.icon-user-unfollow').click();\ncy.get('[name=\"email\"]').type(random_email);\ncy.get('.register > :nth-child(2) > [name=\"password\"]').type(random_password);\ncy.get('[name=\"register\"]').click();\ncy.get('.page-title').should('exist');",
+              "err": {},
+              "uuid": "6d11fc57-b3d9-4381-a5bb-302d882e2fa4",
+              "parentUUID": "efc40e3e-71cf-48b4-80f7-0201363cb784",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6d11fc57-b3d9-4381-a5bb-302d882e2fa4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11897,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

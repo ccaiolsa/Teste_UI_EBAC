@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                echo 'Building..'
+                sh 'NO_COLOR=1 npm install'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'npx cypress run'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                
             }
         }
     }

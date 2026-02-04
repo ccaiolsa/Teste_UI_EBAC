@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-04T15:24:48.715Z",
+    "end": "2026-02-04T15:25:11.243Z",
+    "duration": 22528,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53126cd3-852d-49b5-8930-a4606cef753c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\pesquisar_produtos.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\pesquisar_produtos.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e7f91bd-04c8-4dc4-8041-d332b95b7625",
+          "title": "Testar Funcionalidade acessar produtos no EBAC-SHOP",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessando carrinho de compras",
+              "fullTitle": "Testar Funcionalidade acessar produtos no EBAC-SHOP Acessando carrinho de compras",
+              "timedOut": null,
+              "duration": 16726,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/// Pesquisando produto\nvar nome_produto = 'Ryker LumaTech';\nvar alerta = 'Checkout';\nvar quantidade = '1';\ncy.get('#primary-menu > .menu-item-629 > a').first().click();\ncy.get('.search').type(nome_produto);\ncy.get('#ui-id-1 > :nth-child(1)').click();\n/// Configurando pedido\ncy.get(':nth-child(1) > .value > .variable-items-wrapper').eq(0).click();\ncy.get(':nth-child(2) > .value > .variable-items-wrapper').eq(0).click();\ncy.get('[name=\"quantity\"]').clear().type(quantidade);\ncy.get('.single_add_to_cart_button').click();\n/// Acessando carrinho de compras\ncy.get('.woocommerce-message > .button').click();\ncy.get('.cart_item > .product-name').contains(nome_produto);\ncy.get('.checkout-button').click();\ncy.get('.page-title').should('contain', alerta);",
+              "err": {},
+              "uuid": "d327af33-bcd5-4cc0-8096-7a4df6d5a577",
+              "parentUUID": "2e7f91bd-04c8-4dc4-8041-d332b95b7625",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d327af33-bcd5-4cc0-8096-7a4df6d5a577"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16726,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
