@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                    bat '''set NO_COLOR=1 && npm ci'''
+                    bat '''npm ci'''
             }
         }
         stage('Test') {
             steps {
-                bat '''npx cypress run'''
+                bat '''set NO_COLOR=1 && npx cypress run'''
             }
         }
         stage('Deploy') {
