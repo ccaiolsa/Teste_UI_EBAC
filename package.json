@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
   "homepage": "https://github.com/ccaiolsa/Teste_UI_EBAC#readme",
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
-    "cypress": "^15.8.1"
+    "cypress": "^15.10.0"
   }
 }
